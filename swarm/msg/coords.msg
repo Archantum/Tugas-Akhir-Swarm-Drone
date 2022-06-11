@@ -1,0 +1,12 @@
+float64 alt1
+float64 lat1
+float64 lon1
+float64 hdg1
+float64 alt2
+float64 lat2
+float64 lon2
+float64 hdg2
+float64 alt3
+float64 lat3
+float64 lon3
+float64 hdg3
