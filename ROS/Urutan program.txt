@@ -1,0 +1,5 @@
+coords : rosrun di laptop
+compute_node : rosrun di laptop
+sort_node : rosrun di laptop
+move1_cmd : rosrun di laptop
+cekmode1_node : rosrun di drone
