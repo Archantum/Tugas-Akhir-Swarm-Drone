@@ -1,9 +1,0 @@
-float64 d12
-float64 d23
-float64 b12
-float64 b23
-float64 alt12
-float64 alt23
-float64 hdg12
-float64 hdg23
-float64 hdg2
