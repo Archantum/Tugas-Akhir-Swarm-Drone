@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="swarm" type="coords_node.py" name="coords"></node>
+	<node pkg="swarm" type="compute_node.py" name="compute"></node>
+</launch>
