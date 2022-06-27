@@ -55,7 +55,7 @@ def callback5(msg):
     dat.lon2 = lon2
     #dat.lon3 = lon3
 
-    rospy.loginfo('\nhdg1:{}, hdg2:{}\nalt1:{},alt2:{}\nlat1:{}, lat2:{}\nlon1:{}, lon2:{}\n'.format(dat.hdg1,dat.hdg2,dat.alt1,dat.alt2,dat.lat1,dat.lat2,dat.lon1,dat.lon2))
+    rospy.loginfo('\nhdg1:{}, hdg2:{}\nalt1:{}, alt2:{}\nlat1:{}, lat2:{}\nlon1:{}, lon2:{}\n'.format(dat.hdg1,dat.hdg2,dat.alt1,dat.alt2,dat.lat1,dat.lat2,dat.lon1,dat.lon2))
 
     pub.publish(dat)
 

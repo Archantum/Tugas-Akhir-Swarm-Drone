@@ -6,16 +6,16 @@ from std_msgs.msg import Float64
 from sensor_msgs.msg import NavSatFix
 hdg1=0
 hdg2=0
-hdg3=0
+#hdg3=0
 alt1=0
 alt2=0
-alt3=0
+#alt3=0
 lat1=0
 lat2=0
-lat3=0
+#lat3=0
 lon1=0
 lon2=0
-lon3=0
+#lon3=0
 pub=rospy.Publisher('/coords',coords,queue_size=10)
 def callback1(msg):
     global hdg1

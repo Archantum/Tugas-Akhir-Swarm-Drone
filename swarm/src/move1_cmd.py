@@ -11,14 +11,24 @@ def callback1(msg):
     alt12=msg.alt12
     hdg12=msg.hdg12
     hdg2=msg.hdg2
+    #print ("Nilai a = ")
+    #a = input()
 
     #roll
+    
     if d12>0.003:
         move11 = 1 #kanan
     elif d12<0.003:
         move11 = 0 #kiri
     elif d12==0.003:
         move11 = 2 #hold
+    
+    #if d12>a:
+    #    move11 = 1 #kanan
+    #elif d12<a:
+    #    move11 = 0 #kiri
+    #elif d12==a:
+    #    move11 = 2 #hold
 
     #pitch
     if b12>90 :
@@ -37,9 +47,9 @@ def callback1(msg):
         move13 = 2 #hold
 
     #yaw
-    if hdg12<180 and hdg12>0:
+    if hdg12>180 or hdg12<0:
         move14 = 0  #kiri
-    elif hdg12>180 or hdg12<0:
+    elif hdg12<180 and hdg12>0:
         move14 = 1 #kanan
     elif hdg12==0 :
         move14 = 2 #hold
