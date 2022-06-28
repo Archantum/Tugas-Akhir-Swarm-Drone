@@ -34,7 +34,7 @@ void messageCb( const swarm::control& cont_msg){
   delay(1);
 }
 
-ros::Subscriber<swarm::control> sub("FlightMode", &messageCb );
+ros::Subscriber<swarm::control> sub("Sort", &messageCb );
 
 void setup() {
   ppmEncoder.begin(OUTPUT_PIN);
@@ -44,6 +44,23 @@ void setup() {
 
 void loop() {
   nh.spinOnce();
-
+  if(mode== 0) {
+     
+    ppmEncoder.setChannel(0, ch1);
+    ppmEncoder.setChannel(1, ch2);
+    ppmEncoder.setChannel(2, ch3);
+    ppmEncoder.setChannel(3, ch4);
+    ppmEncoder.setChannel(4, ch5);
+    ppmEncoder.setChannel(5, ch6);
+    }
+  if(mode == 3){
+    
+    ppmEncoder.setChannel(0, ch1);
+    ppmEncoder.setChannel(1, ch2);
+    ppmEncoder.setChannel(2, ch3);
+    ppmEncoder.setChannel(3, ch4);
+    ppmEncoder.setChannel(4, ch5);
+    ppmEncoder.setChannel(5, ch6);
+  }
   delay(1);
 }

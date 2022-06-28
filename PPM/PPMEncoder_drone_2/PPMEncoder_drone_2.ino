@@ -21,7 +21,7 @@ void messageCb( const swarm::control& cont_msg){
     ppmEncoder.setChannel(4, ch5);
     ppmEncoder.setChannel(5, ch6);
   }
-  if(mode == 3){
+  if(mode== 3){
     ppmEncoder.setChannel(0, ch1);
     ppmEncoder.setChannel(1, ch2);
     ppmEncoder.setChannel(2, ch3);
