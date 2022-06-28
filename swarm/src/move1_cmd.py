@@ -11,47 +11,38 @@ def callback1(msg):
     alt12=msg.alt12
     hdg12=msg.hdg12
     hdg2=msg.hdg2
-    #print ("Nilai a = ")
-    #a = input()
+    
 
     #roll
-    
-    if d12>0.003:
+    if d12>0.0041:
         move11 = 1 #kanan
-    elif d12<0.003:
+    elif d12<0.0019:
         move11 = 0 #kiri
-    elif d12==0.003:
+    elif d12>0.002 or d12<0.004: #harusnya 3 meter fix
         move11 = 2 #hold
-    
-    #if d12>a:
-    #    move11 = 1 #kanan
-    #elif d12<a:
-    #    move11 = 0 #kiri
-    #elif d12==a:
-    #    move11 = 2 #hold
 
     #pitch
-    if b12>90 :
+    if b12>96 :
         move12 = 0 #mundur
-    elif b12<90:
+    elif b12<84 :
         move12 = 1 #maju
-    elif b12==90 :
+    elif b12>85 or b12<95 :
         move12 = 2 #hold
 
     #throttle
-    if alt12<0 :
+    if alt12 < -0.6 :
         move13 = 0 #turun
-    elif alt12>0 : 
+    elif alt12 > 0.6 : 
         move13 = 1 #naik
-    elif alt12==0 :
+    elif alt12 > -0.5 or alt12 < 0.5 :
         move13 = 2 #hold
 
-    #yaw
-    if hdg12>180 or hdg12<0:
+    #yaw - udah ok
+    if hdg12 > 180 or hdg12 < -8:
         move14 = 0  #kiri
-    elif hdg12<180 and hdg12>0:
+    elif hdg12 < 180 and hdg12 > 8:
         move14 = 1 #kanan
-    elif hdg12==0 :
+    elif hdg12 > -7 or hdg12 < 7 :
         move14 = 2 #hold
 
 def callback2(msg):
@@ -64,7 +55,7 @@ def callback2(msg):
     ch6=msg.ch6
     mode=msg.mode
 
-    cmd=move1();
+    cmd=move1()
     cmd.ch1 = ch1
     cmd.ch2 = ch2
     cmd.ch3 = ch3

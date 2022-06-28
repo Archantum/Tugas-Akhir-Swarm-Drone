@@ -33,17 +33,21 @@ def callback1(msg):
 
     X12 = cos(lat2)*sin(lon2-lon1)
     Y12 = cos(lat1)*sin(lat2) - sin(lat1)*cos(lat2)*cos(lon2-lon1)
-    B1 = atan2(X12,Y12)
-    #>>>TRY THIS>>> B1 = atan2(Y12,X12)
-    B12 = B1*180/math.pi
-    #>>>TRY THIS>>> B1 = math.degrees(B1)
-    #>>>TRY THIS>>> B12 = (B1 + 360) % 360
+    #B1 = atan2(X12,Y12)
+    B1 = atan2(Y12,X12)
+    #B12 = B1*180/math.pi
+    B1 = math.degrees(B1)
+    B12 = (B1 + 360) % 360
     #B12 = 90
 
     alt12 = (alt2)-alt1
+    #alt12 = 0
     #alt23 = alt2-alt3
+
     hdg12 = (hdg2)-hdg1
+    #hdg12 = 0
     #hdg23 = hdg2-hdg3
+    
     dat=compute();
     dat.d12=d12
     #dat.d23=d23

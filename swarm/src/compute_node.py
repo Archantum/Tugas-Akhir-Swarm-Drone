@@ -46,8 +46,8 @@ def callback1(msg):
     #B2 = math.atan2(X23,Y23)
     #B23 = B2*180/math.pi
 
-    #alt12 = (alt2+4)-alt1
-    alt12 = 0
+    alt12 = (alt2)-alt1
+    #alt12 = 0
 
     #alt23 = alt2-alt3
     hdg12 = (hdg2)-hdg1
