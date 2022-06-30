@@ -40,10 +40,10 @@ void messageCb( const swarm::move1& cont_msg){
       }
       //THROTTLE CH3
       if(move13==0){
-        ppmEncoder.setChannel(2, 1400);//turun
+        ppmEncoder.setChannel(2, 1380);//turun
       }
       else if (move13==1){
-        ppmEncoder.setChannel(2, 1600); //naik
+        ppmEncoder.setChannel(2, 1620); //naik
       }
       else if (move13==2){
         ppmEncoder.setChannel(2, ch3); //hold
@@ -85,30 +85,30 @@ void loop() {
   if(mode== 0) {
       //ROLL CH1
       if(move11==0){
-        ppmEncoder.setChannel(0, 1450); //kiri
+        ppmEncoder.setChannel(0, 1420); //kiri
       }
       else if (move11==1){
-        ppmEncoder.setChannel(0, 1550); //kanan
+        ppmEncoder.setChannel(0, 1580); //kanan
       }
       else if (move11==2){
         ppmEncoder.setChannel(0, ch1); //hold
       }
       //PITCH CH2
       if(move12==0){
-        ppmEncoder.setChannel(1, 1450); //mundur
+        ppmEncoder.setChannel(1, 1400); //mundur
       }
       else if (move12==1){
-        ppmEncoder.setChannel(1, 1550); //maju
+        ppmEncoder.setChannel(1, 1600); //maju
       }
       else if (move12==2){
         ppmEncoder.setChannel(1, ch2); //hold
       }
       //THROTTLE CH3
       if(move13==0){
-        ppmEncoder.setChannel(2, 1450);//turun
+        ppmEncoder.setChannel(2, 1380);//turun
       }
       else if (move13==1){
-        ppmEncoder.setChannel(2, 1550); //naik
+        ppmEncoder.setChannel(2, 1620); //naik
       }
       else if (move13==2){
         ppmEncoder.setChannel(2, ch3); //hold
