@@ -16,18 +16,19 @@ def callback1(msg):
     #roll
     if d12>0.0041:
         move11 = 1 #kanan
-    elif d12<0.0019:
+    elif d12<0.0024:
         move11 = 0 #kiri
-    elif d12>0.002 or d12<0.004: #harusnya 3 meter fix
+    elif d12>0.0025 or d12<0.004: #harusnya 3 meter fix
         move11 = 2 #hold
 
     #pitch
-    if b12>96 :
-        move12 = 0 #mundur
-    elif b12<84 :
-        move12 = 1 #maju
-    elif b12>85 or b12<95 :
-        move12 = 2 #hold
+    move12 = 2
+    #if b12>96 :
+    #    move12 = 0 #mundur
+    #elif b12<84 :
+    #    move12 = 1 #maju
+    #elif b12>85 or b12<95 :
+    #    move12 = 2 #hold
 
     #throttle
     if alt12 < -0.6 :

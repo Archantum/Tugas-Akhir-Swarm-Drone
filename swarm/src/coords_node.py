@@ -4,6 +4,7 @@ import rospy
 from swarm.msg import control, channels, coords
 from std_msgs.msg import Float64
 from sensor_msgs.msg import NavSatFix
+from time import time
 hdg1=0
 hdg2=0
 #hdg3=0
@@ -68,8 +69,11 @@ def main():
     rospy.Subscriber("/mavros2/mavros/global_position/global", NavSatFix, callback5)
     #rospy.Subscriber("/mavros3/mavros/global_position/global", NavSatFix, callback6)
 
-
+    rate = rospy.Rate(5)
     rospy.spin()
+    rate.sleep
+
+    
 
 if __name__ == '__main__':
     main()
