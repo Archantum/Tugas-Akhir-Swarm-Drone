@@ -38,11 +38,11 @@ def callback1(msg):
     #d23= c23*r
 
     #PITCH
-    X12 = cos(lat2)*sin(lon2-lon1)
-    Y12 = cos(lat1)*sin(lat2) - sin(lat1)*cos(lat2)*cos(lon2-lon1)
-    B1 = math.atan2(X12,Y12)
-    B12 = B1*180/math.pi
-    #B12 = 90 #buat test  
+    #X12 = cos(lat2)*sin(lon2-lon1)
+    #Y12 = cos(lat1)*sin(lat2) - sin(lat1)*cos(lat2)*cos(lon2-lon1)
+    #B1 = math.atan2(X12,Y12)
+    #B12 = B1*180/math.pi
+    B12 = 90 #buat test  
 
     #X23 = cos(lat3)*sin(lon3-lon2)
     #Y23 = cos(lat2)*sin(lat3) - sin(lat2)*cos(lat3)*cos(lon3-lon2)
@@ -50,7 +50,7 @@ def callback1(msg):
     #B23 = B2*180/math.pi
 
     #THROTTLE
-    alt12 = (alt2-2)-alt1 #tambahin kalo nilai alt beda di awal
+    alt12 = (alt2)-alt1 #tambahin kalo nilai alt beda di awal
     #alt12 = 0 #buat test
 
     #alt23 = alt2-alt3
