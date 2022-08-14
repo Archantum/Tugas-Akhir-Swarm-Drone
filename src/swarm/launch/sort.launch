@@ -1,8 +1,0 @@
-<launch>
-	<node pkg="rosserial_python" type="serial_node.py" name="chatter">
-		<param name="port" type="string" value="/dev/ttyACM0"></param>
-    		<param name="baud" type="int" value="9600"></param>
-	</node>
-	<node pkg="swarm" type="cekmode_node.py" name="FlightMode"></node>
-	<node pkg="swarm" type="sort_node.py" name="Sort"></node>
-</launch>
